@@ -1,0 +1,4 @@
+Q: What happens when you initialize a repository? Why do you need to do it?
+
+A: when you initialize you tell the repository where and when you want to start tracking your files. This is because you may not want to track every directory and file.
+
