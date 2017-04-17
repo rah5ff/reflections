@@ -2,3 +2,46 @@ Q: What happens when you initialize a repository? Why do you need to do it?
 
 A: when you initialize you tell the repository where and when you want to start tracking your files. This is because you may not want to track every directory and file.
 
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+A: the staging area is the go between the working directory and the repository. It allows a logical seperation between what active work you are doing and what you want to checkpoint and which files you want to checkpoint. It allows you to think about what you really want to commit.
+
+Standard practice to write commits as if you are writing a command. Add vs Added, use the imperative tone.
+
+Q: How can you use the staging area to make sure you have one commit per logical change?
+
+A: you can compare the staging area to both the most recent commit and the working directory to see which chances exactly you made and make sure to only make one commit per logical change.
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: Useful for experimental changes or any changes you want to keep track of but don't want to add to the main branch or official history. Could be useful for collaborators and testing your own version before adding back into main file. Master branch as the production quality branch, can always merge back. 
+
+Q: How do the diagrams help you visualize the branch structure?
+
+A: it helps you to map out the non linear map of what a commit tree could look like and what nodes and leaves are reachable from where. Its espicially helpful as the experimentation and fragmentation of your project grows.
+
+
+you only need to specify the branch you are merging the current branch you have checked out will assumed to be in that merge.
+
+When changes merge they will be chronological but not always next to logical parent. Use "git show" to see the changes introduced by a commit from its logical parent.
+
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+
+A: The result is the commits are now ordered by time of commit and the parent of the commit isn't immediately clear by the timeline. The diagram is shown the way it is so that we can quickly navigate the parents of files
+
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+A: pro
+	- easy to see conflicts, might not need to care for vast majority easy to merge the vast majority of cases
+	- saves time
+
+	con
+	- can miss is when there are conflicts that need to be resolved
+	- will know the final file better if you have to merge manually
+
+
+
+
